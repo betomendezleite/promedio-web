@@ -1,0 +1,238 @@
+.btn {
+    width: 15.625rem;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btn_sec {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 34px;
+    background-color: transparent;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.75);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+}
+
+.btn_sec::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 90px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, #fa9f18 0%, #f87b2d 100%);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn_sec:hover::before {
+    scale: 3;
+}
+
+.btn_sec:hover {
+    color: #3a2622;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
+
+.btn_sec:active {
+    scale: 1;
+}
+
+.btn_ter {
+    width: 150px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 24px;
+    font-size: 15px;
+    color: #021742;
+    border: 2px solid #021742;
+    border-radius: 34px;
+    background-color: transparent;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.75);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn_ter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 90px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, #fa9f18 0%, #f87b2d 100%);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn_ter:hover::before {
+    scale: 3;
+}
+
+.btn_ter:hover {
+    color: #3a2622;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
+
+.btn_ter:active {
+    scale: 1;
+}
+
+/* Establece un borde blanco por defecto */
+.input_promedio_group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: 1px solid #ffffff;
+    /* Borde blanco por defecto */
+    overflow: hidden;
+    /* Oculta el borde cuando se haga más pequeño */
+    transition: border-bottom-color 0.3s, border-bottom-width 0.3s;
+    /* Agrega transiciones para los cambios de color y tamaño */
+}
+
+/* Cambia el color y el tamaño del borde cuando el input tiene foco */
+.input_promedio_group:focus-within {
+    border-bottom-color: #f98428;
+    /* Cambia el color del borde al color deseado (#F98428) */
+    border-bottom-width: 1px;
+    /* Aumenta el tamaño del borde (ajusta según tus preferencias) */
+}
+
+.input_promedio {
+    margin-left: 5px;
+    background: none;
+    color: white;
+    border: none;
+    width: 100%;
+    /* Establecemos el ancho del input al 100% */
+}
+
+.input_promedio::before {
+    border: none;
+}
+
+.input_promedio:default {
+    color: white;
+}
+
+.input_promedio:focus {
+    outline: none;
+}
+
+.input_promedio::placeholder {
+    color: white;
+}
+
+.input_promedio::-ms-reveal {
+    color: #fa9f18;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.card_title {
+    width: 50%;
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 1.25rem 1.25rem 0rem 0rem;
+    background: #f7a22b;
+    color: #021742;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px;
+}
+
+.card_body {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    background: #d9d9d9;
+}
+
+@media (max-width: 850px) {
+    .card_title {
+        width: 65%;
+    }
+}
+
+@media (max-width: 550px) {
+    .card_title {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Ocultar las columnas que exceden 6 */
+    #responsive-table tbody td:nth-child(n + 7),
+    #responsive-table thead th:nth-child(n + 7) {
+        display: none;
+    }
+
+    /* Estilos para el botón "Ver Más" */
+    .show-more {
+        display: none;
+        text-align: center;
+        cursor: pointer;
+        background-color: #f1f1f1;
+    }
+}
+
+@media (max-width: 550px) {
+    /* Ocultar las columnas que exceden 4 */
+    #responsive-table tbody td:nth-child(n + 5),
+    #responsive-table thead th:nth-child(n + 5) {
+        display: none;
+    }
+
+    /* Estilos para el botón "Ver Más" */
+    .show-more {
+        display: none;
+        text-align: center;
+        cursor: pointer;
+        background-color: #f1f1f1;
+    }
+}
+
+.table_responsive {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    background: rgb(231, 231, 231);
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.8);
+    color: #021742;
+}
+
+.box_content {
+    border-radius: 0.5rem;
+    border: 1px solid #e3e3e3;
+    background: linear-gradient(180deg, #ececec 0%, #a7a7a7 100%);
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.75));
+}
+
+.tabActive {
+    background: #f7a22b;
+    color: white;
+}

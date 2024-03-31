@@ -1,0 +1,133 @@
+@keyframes fade-in-from-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content_login {
+    display: flex;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    align-items: center;
+    justify-items: center;
+    animation: fade-in-from-top 1s ease-in-out;
+    position: relative; /* Agrega la posición relativa para que el z-index funcione */
+    z-index: 10; /* Ajusta este valor según tus necesidades, debe ser mayor que el z-index de los otros elementos */
+}
+/* Reduzca el margen inferior del div que contiene el texto "LOGIN" */
+.content_login > div:first-child {
+    margin-top: 40px; /* Ajusta este valor según tus preferencias para acercar el texto al contenedor */
+}
+
+.vector_bg {
+    background: url("/assets/bg_vector_2.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    width: 55.8125rem;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+}
+.vector_bg_3 {
+    background: url(../assets/bg_vector_3.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    width: 55.8125rem;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.box_login {
+    padding: 40px;
+    width: 100%;
+    max-width: 32.375rem;
+    height: 28.4375rem;
+    margin: 0 auto;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    background: #021742;
+    box-shadow: 0px 10px 20px 0px #000;
+    z-index: 5;
+}
+
+.player_bg {
+    background: url(../assets/bg_player_1.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+}
+
+.player_bg_2 {
+    background: url(../assets/bg_player_2.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    z-index: 2;
+}
+
+.player_bg_3 {
+    background: url(../assets/bg_ball.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    width: 100%;
+    max-width: 360px;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.player_bg_4 {
+    background: url(../assets/bg_cesta.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    max-width: 360px;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+}
+
+.alertLogin {
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 40px;
+    display: none;
+}
+
+@media (max-width: 393px) {
+    .box_login {
+        width: 95%;
+    }
+    .player_bg {
+        background-size: cover;
+    }
+    .player_bg_2 {
+        background-size: cover;
+    }
+}

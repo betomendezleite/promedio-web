@@ -1,0 +1,642 @@
+/* ******************************************
+                GERAL
+****************************************** */
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ******************************************
+                MEDIDAS
+****************************************** */
+.w_100 {
+    width: 100%;
+}
+
+.w_75 {
+    width: 75%;
+}
+
+.w_50 {
+    width: 50%;
+}
+
+.h_100 {
+    height: 100%;
+}
+
+/* ******************************************
+                PADDING
+****************************************** */
+.p_1 {
+    padding: 10px;
+}
+
+.p_2 {
+    padding: 20px;
+}
+
+.p_3 {
+    padding: 30px;
+}
+
+.p_4 {
+    padding: 40px;
+}
+
+.p_5 {
+    padding: 50px;
+}
+.gap_05 {
+    grid-gap: 5px;
+}
+.gap_10 {
+    grid-gap: 10px;
+}
+.gap_15 {
+    grid-gap: 15px;
+}
+/* ******************************************
+                MARGIN
+****************************************** */
+.m_1 {
+    margin: 10px;
+}
+
+.m_2 {
+    margin: 20px;
+}
+
+.m_3 {
+    margin: 30px;
+}
+
+.m_4 {
+    margin: 40px;
+}
+
+.m_5 {
+    margin: 50px;
+}
+.mt_05 {
+    margin-top: 5px;
+}
+
+.container_promedio {
+    margin: 2.5%;
+    width: 95%;
+}
+
+@media (max-width: 350px) {
+    .container_promedio {
+        margin: 0;
+    }
+}
+
+/* ******************************************
+                TAMANHO FONTES
+****************************************** */
+.fs_36 {
+    font-size: 36px !important;
+}
+
+.fs_16 {
+    font-size: 16px !important;
+}
+
+.fs_14 {
+    font-size: 14px !important;
+}
+
+.fs_13 {
+    font-size: 13px !important;
+}
+
+.fs_12 {
+    font-size: 12px !important;
+}
+.fs_10 {
+    font-size: 10px !important;
+}
+.fs_9 {
+    font-size: 9px !important;
+}
+
+.fs_8 {
+    font-size: 8px !important;
+}
+
+/* ******************************************
+                PESO FONTES
+****************************************** */
+.f_ligth {
+    font-weight: 300;
+}
+
+.f_medium {
+    font-weight: 500;
+}
+
+.f_semibold {
+    font-weight: 600;
+}
+
+/* ******************************************
+                ALINHAMENTO FONTE
+****************************************** */
+.text_align_center {
+    text-align: center;
+}
+
+.text_align_end {
+    text-align: end;
+}
+
+/* ******************************************
+                ALINHAMENTO 
+****************************************** */
+.align_end {
+    display: flex;
+    justify-content: end;
+}
+
+.align_center {
+    display: flex;
+    justify-content: center;
+}
+
+/* ******************************************
+                COLUNAS
+****************************************** */
+
+.grid_center_horizontal {
+    justify-items: center;
+}
+.grid_end_horizontal {
+    justify-content: end;
+}
+
+.grid_center_vertical {
+    align-items: center;
+}
+.grid_align_between {
+    display: grid;
+    justify-content: space-between;
+}
+
+.grid_center_vertical {
+    align-content: center;
+}
+
+.col_1 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.col_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.col_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.col_4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.col_5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col_6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col_8 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+@media (max-width: 850px) {
+    .col_4 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .col_3 {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .col_4 {
+        grid-template-columns: 1fr;
+    }
+    .col_3 {
+        display: grid;
+
+        grid-template-columns: 1fr;
+    }
+    .col_2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ******************************************
+                ROUNDED
+****************************************** */
+
+/* ******************************************
+                CORES
+****************************************** */
+
+.bg_azul {
+    background: #021742;
+}
+
+.bg_white {
+    background: white;
+}
+
+.color_white {
+    color: white;
+}
+
+.color_orange_1 {
+    color: #f98428;
+}
+
+.color_azul {
+    color: #021742;
+}
+
+/* ******************************************
+                BUTTOES
+****************************************** */
+
+.btn_small {
+    width: fit-content;
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    display: flex;
+    align-items: center;
+    background: none;
+}
+
+.btn_medium {
+    width: 19.125rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.btn_estatiticas {
+    width: 17.625rem;
+    height: 1.875rem;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    border: 1px solid #ff4141;
+    background: linear-gradient(117deg, #f98428 0%, #fa9d1a 100%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn_pro_2 {
+    border-radius: 0.625rem;
+    border: 1px solid #ff4141;
+    background: linear-gradient(117deg, #f98428 0%, #fa9d1a 100%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+/* ******************************************
+                INPUTS
+****************************************** */
+.input_container {
+    position: relative;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+
+    height: 30px;
+    color: #021742;
+}
+
+.input_field {
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+.input_field:active {
+    border: none;
+    background: none;
+    outline: none;
+    color: #021742;
+}
+
+.input_field:focus {
+    border: none;
+    background: none;
+    outline: none;
+    color: #021742;
+}
+
+.input_highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 2;
+    background-color: #021742;
+    transition: all 0.3s ease;
+}
+
+.input_highlight_hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    z-index: 2;
+    background-color: #f98428;
+    transition: all 0.3s ease;
+}
+
+.anim-div {
+    animation: expandWidth 1s ease-in-out forwards;
+}
+
+@keyframes expandWidth {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* ******************************************
+                DROPDOWN
+****************************************** */
+
+/* .dropdow_menu{
+   background: white;
+   color: #021742;
+   padding: 10px;
+   position: absolute;
+   top: 70px;
+   width: max-content;
+   min-width: 80px;
+   text-align: center;
+   right: 10px;
+   border-radius: 10px;
+   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+.dropdown_link{
+    color: #021742;
+} */
+
+.dropdow_menu {
+    background: white;
+    color: #021742;
+
+    position: absolute;
+    top: 70px;
+    width: max-content;
+    min-width: 80px;
+    height: fit-content;
+    text-align: center;
+    right: 10px;
+    border-radius: 10px;
+    border: 2px rgb(240, 240, 240) solid;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background: white;
+    font-size: 13px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    border: none;
+    list-style: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dropdown_link a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.dropdown_link::after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #fa9d1a;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.dropdown_link:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.dropdown_link span {
+    text-align: center;
+    width: 100%;
+    padding: 18px 25px;
+    color: #021742;
+    font-size: 14px;
+
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    /* Cambia esto a display block */
+}
+
+.dropdown_link:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.arrow_icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.drop_down {
+    position: relative;
+}
+
+.dropdow_btn {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: #021742;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.dropdow_menu_btn {
+    border-radius: 0.625rem;
+    border: 2px solid #e3e3e3;
+    background: linear-gradient(180deg, #ececec 0%, #a7a7a7 100%);
+    text-align: center;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 2;
+    color: #021742;
+}
+
+.drop_down.active .dropdow_menu_btn {
+    display: block;
+}
+
+/* ******************************************
+                MODAL EST
+****************************************** */
+
+.modal_est_cont {
+    display: none;
+    background: #021742;
+    height: 100vh;
+    width: 100vw;
+    z-index: 8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    justify-content: center;
+    animation: fadeIn 0.5s;
+}
+.modal {
+    background-color: white;
+    border-radius: 0.625rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    position: relative;
+    max-width: 80%;
+}
+
+.close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 20px;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+th {
+    text-align: center;
+    padding: 5px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+    color: #021742;
+}
+
+/* 
+************************************
+        TOOL TIP  
+************************************ */
+
+/* Estilo del tooltip */
+.tooltip {
+    position: absolute;
+    z-index: 999;
+    background-color: #021742;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    display: none; /* Lo ocultamos por defecto */
+}
